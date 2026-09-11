@@ -1,0 +1,178 @@
+:root {
+  color: #1f2937;
+  background: #f7f3ed;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(960px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
+.logo {
+  color: #1f2937;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #4b5563;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: #b45309;
+}
+
+.page {
+  width: min(680px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 120px 0;
+}
+
+.eyebrow {
+  color: #b45309;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+h1 {
+  max-width: 620px;
+  margin: 20px 0;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 1.05;
+}
+
+.intro {
+  max-width: 520px;
+  color: #4b5563;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  color: #ffffff;
+  background: #1f2937;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.about {
+  margin-top: 140px;
+  padding-top: 32px;
+  border-top: 1px solid #d6d3d1;
+}
+
+.about p {
+  color: #4b5563;
+  line-height: 1.8;
+}
+
+.interests {
+  margin-top: 80px;
+}
+
+.interests h2,
+.contact h2 {
+  margin-bottom: 0;
+}
+
+.interest-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.interest-card {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e7e5e4;
+  border-radius: 16px;
+}
+
+.interest-number {
+  color: #b45309;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.interest-card h3 {
+  margin: 24px 0 8px;
+}
+
+.interest-card p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.contact {
+  margin-top: 120px;
+  padding: 48px;
+  text-align: center;
+  background: #eee7dc;
+  border-radius: 24px;
+}
+
+.contact p:last-child {
+  color: #4b5563;
+  line-height: 1.8;
+}
+
+.site-footer {
+  width: min(680px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 32px 0 48px;
+  color: #78716c;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  .page {
+    padding: 72px 0;
+  }
+
+  .interest-list {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    padding: 32px 24px;
+  }
+}
