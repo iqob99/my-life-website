@@ -32,6 +32,18 @@ body {
   transition: color 200ms ease, background-color 200ms ease;
 }
 
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .site-header {
   display: flex;
   align-items: center;
@@ -39,6 +51,7 @@ body {
   width: min(960px, calc(100% - 40px));
   margin: 0 auto;
   padding: 24px 0;
+  animation: page-enter 600ms ease both;
 }
 
 .logo {
@@ -84,6 +97,7 @@ nav a:focus-visible {
   width: min(680px, calc(100% - 40px));
   margin: 0 auto;
   padding: 120px 0;
+  animation: page-enter 700ms 120ms ease both;
 }
 
 .profile-image {
@@ -410,6 +424,18 @@ h1 {
   color: var(--muted-color);
   font-size: 0.85rem;
   text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header,
+  .page {
+    animation: none;
+  }
+
+  body {
+    scroll-behavior: auto;
+    transition: none;
+  }
 }
 
 @media (max-width: 640px) {
