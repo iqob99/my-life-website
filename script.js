@@ -31,3 +31,9 @@ imageDialog.addEventListener("cancel", (event) => {
   event.preventDefault();
   imageDialog.close();
 });
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && imageDialog.open) {
+    imageDialog.close();
+  }
+});
