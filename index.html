@@ -105,14 +105,21 @@
           action="https://formspree.io/f/xqpkjgvj"
           method="POST"
         >
-          <label for="name">你的名字 *</label>
-          <input id="name" name="name" type="text" required>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">你的名字 *</label>
+              <input id="name" name="name" type="text" required>
+            </div>
+            <div class="form-field">
+              <label for="email">你的邮箱 *</label>
+              <input id="email" name="email" type="email" required>
+            </div>
+          </div>
 
-          <label for="email">你的邮箱 *</label>
-          <input id="email" name="email" type="email" required>
-
-          <label for="message">留言内容 *</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <div class="form-field">
+            <label for="message">留言内容 *</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
 
           <button class="submit-button" type="submit">发送留言</button>
         </form>

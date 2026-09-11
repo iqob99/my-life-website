@@ -275,8 +275,24 @@ h1 {
 
 .message-form {
   display: grid;
-  gap: 10px;
+  gap: 20px;
   margin-top: 28px;
+  padding: 28px;
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  text-align: left;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.form-field {
+  display: grid;
+  gap: 8px;
 }
 
 .message-form label {
@@ -286,7 +302,6 @@ h1 {
 .message-form input,
 .message-form textarea {
   width: 100%;
-  margin-bottom: 12px;
   padding: 12px 14px;
   color: var(--text-color);
   background: var(--card-background);
@@ -303,6 +318,11 @@ h1 {
 .message-form textarea:focus {
   outline: 2px solid var(--accent-color);
   outline-offset: 2px;
+}
+
+.message-form input:user-invalid,
+.message-form textarea:user-invalid {
+  border-color: #dc2626;
 }
 
 .submit-button {
@@ -357,5 +377,13 @@ h1 {
 
   .contact {
     padding: 32px 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .message-form {
+    padding: 20px;
   }
 }
