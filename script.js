@@ -14,3 +14,15 @@ themeToggle.addEventListener("click", () => {
   updateTheme(isDarkMode);
   localStorage.setItem("theme", isDarkMode ? "dark" : "light");
 });
+
+const profileButton = document.querySelector(".profile-button");
+const imageDialog = document.querySelector(".image-dialog");
+const dialogClose = document.querySelector(".dialog-close");
+
+profileButton.addEventListener("click", () => {
+  imageDialog.showModal();
+});
+
+dialogClose.addEventListener("click", () => {
+  imageDialog.close();
+});
