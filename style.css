@@ -155,6 +155,20 @@ h1 {
   line-height: 1.8;
 }
 
+.email-link {
+  display: inline-block;
+  margin-top: 16px;
+  color: #92400e;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.email-link:hover,
+.email-link:focus-visible {
+  color: #451a03;
+  text-decoration: underline;
+}
+
 .site-footer {
   width: min(680px, calc(100% - 40px));
   margin: 0 auto;
