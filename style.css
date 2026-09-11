@@ -139,6 +139,65 @@ h1 {
   line-height: 1.8;
 }
 
+.journey {
+  margin-top: 96px;
+}
+
+.timeline {
+  position: relative;
+  margin: 32px 0 0;
+  padding: 0 0 0 32px;
+  list-style: none;
+}
+
+.timeline::before {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 7px;
+  width: 2px;
+  background: var(--border-color);
+  content: "";
+}
+
+.timeline-item {
+  position: relative;
+  padding: 0 0 40px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  top: 6px;
+  left: -32px;
+  width: 16px;
+  height: 16px;
+  background: var(--page-background);
+  border: 4px solid var(--accent-color);
+  border-radius: 50%;
+}
+
+.timeline-label {
+  margin: 0 0 8px;
+  color: var(--accent-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.timeline-item h3 {
+  margin: 0 0 8px;
+}
+
+.timeline-item > p:last-child {
+  margin: 0;
+  color: var(--muted-color);
+  line-height: 1.7;
+}
+
 .interests {
   margin-top: 80px;
 }
