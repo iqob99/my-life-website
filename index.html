@@ -93,6 +93,30 @@
           发送邮件给我：123456789@qq.com
         </a>
       </section>
+
+      <section class="message-section" aria-labelledby="message-title">
+        <p class="eyebrow">LEAVE A MESSAGE</p>
+        <h2 id="message-title">给我留言</h2>
+        <p class="form-note">
+          如果你愿意，可以留下你的想法。带有星号的项目必须填写。
+        </p>
+        <form
+          class="message-form"
+          action="https://formspree.io/f/xqpkjgvj"
+          method="POST"
+        >
+          <label for="name">你的名字 *</label>
+          <input id="name" name="name" type="text" required>
+
+          <label for="email">你的邮箱 *</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="message">留言内容 *</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button class="submit-button" type="submit">发送留言</button>
+        </form>
+      </section>
     </main>
 
     <footer class="site-footer">
