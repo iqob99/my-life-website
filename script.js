@@ -26,3 +26,8 @@ profileButton.addEventListener("click", () => {
 dialogClose.addEventListener("click", () => {
   imageDialog.close();
 });
+
+imageDialog.addEventListener("cancel", (event) => {
+  event.preventDefault();
+  imageDialog.close();
+});
