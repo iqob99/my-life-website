@@ -50,6 +50,17 @@ nav a:focus-visible {
   padding: 120px 0;
 }
 
+.profile-image {
+  display: block;
+  width: 152px;
+  height: 152px;
+  margin-bottom: 32px;
+  object-fit: cover;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 12px 30px rgb(68 51 35 / 12%);
+}
+
 .eyebrow {
   color: #b45309;
   font-size: 0.8rem;
