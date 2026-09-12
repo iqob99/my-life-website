@@ -6,6 +6,7 @@
   --border-color: #e7e5e4;
   --contact-background: #eee7dc;
   --accent-color: #b45309;
+  --button-text-color: #ffffff;
   color: var(--text-color);
   background: var(--page-background);
   font-family: "Microsoft YaHei", sans-serif;
@@ -19,6 +20,7 @@
   --border-color: #4b5563;
   --contact-background: #374151;
   --accent-color: #fbbf24;
+  --button-text-color: #111827;
 }
 
 * {
@@ -50,7 +52,7 @@ body {
   bottom: 24px;
   z-index: 5;
   padding: 10px 14px;
-  color: var(--card-background);
+  color: var(--button-text-color);
   background: var(--text-color);
   border: 0;
   border-radius: 999px;
@@ -290,10 +292,15 @@ h1 {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 20px;
-  color: #ffffff;
+  color: var(--button-text-color);
   background: var(--text-color);
   border-radius: 999px;
   text-decoration: none;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: var(--accent-color);
 }
 
 .about {
@@ -639,7 +646,7 @@ h1 {
   justify-self: start;
   margin-top: 4px;
   padding: 12px 20px;
-  color: var(--card-background);
+  color: var(--button-text-color);
   background: var(--text-color);
   border: 0;
   border-radius: 999px;
