@@ -7,33 +7,37 @@ function updateTheme(isDarkMode) {
   themeToggle.textContent = isDarkMode ? "浅色模式" : "深色模式";
 }
 
-updateTheme(savedTheme === "dark");
+if (themeToggle) {
+  updateTheme(savedTheme === "dark");
 
-themeToggle.addEventListener("click", () => {
-  const isDarkMode = !document.body.classList.contains("dark-mode");
-  updateTheme(isDarkMode);
-  localStorage.setItem("theme", isDarkMode ? "dark" : "light");
-});
+  themeToggle.addEventListener("click", () => {
+    const isDarkMode = !document.body.classList.contains("dark-mode");
+    updateTheme(isDarkMode);
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+  });
+}
 
 const profileButton = document.querySelector(".profile-button");
 const imageDialog = document.querySelector(".image-dialog");
 const dialogClose = document.querySelector(".dialog-close");
 
-profileButton.addEventListener("click", () => {
-  imageDialog.showModal();
-});
+if (profileButton && imageDialog && dialogClose) {
+  profileButton.addEventListener("click", () => {
+    imageDialog.showModal();
+  });
 
-dialogClose.addEventListener("click", () => {
-  imageDialog.close();
-});
+  dialogClose.addEventListener("click", () => {
+    imageDialog.close();
+  });
 
-imageDialog.addEventListener("cancel", (event) => {
-  event.preventDefault();
-  imageDialog.close();
-});
+  imageDialog.addEventListener("cancel", (event) => {
+    event.preventDefault();
+    imageDialog.close();
+  });
+}
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && imageDialog.open) {
+  if (event.key === "Escape" && imageDialog && imageDialog.open) {
     imageDialog.close();
   }
 });

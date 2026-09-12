@@ -337,6 +337,44 @@ h1 {
   text-decoration: underline;
 }
 
+.article-detail h1 {
+  margin: 16px 0;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  line-height: 1.2;
+}
+
+.article-detail .article-date {
+  margin-top: 48px;
+}
+
+.article-body {
+  margin-top: 40px;
+}
+
+.article-body p {
+  color: var(--muted-color);
+  line-height: 2;
+}
+
+.article-body h2 {
+  margin-top: 40px;
+  font-size: 1.35rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 40px;
+  color: var(--accent-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
 .interests h2,
 .contact h2 {
   margin-bottom: 0;
