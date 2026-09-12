@@ -81,7 +81,7 @@ function updateBackToTopVisibility() {
     return;
   }
 
-  backToTop.classList.toggle("is-visible", window.scrollY > 400);
+  backToTop.classList.toggle("is-visible", window.scrollY > 200);
 }
 
 if (backToTop) {
