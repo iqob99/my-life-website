@@ -65,6 +65,15 @@ if (readingProgress) {
   window.addEventListener("resize", updateReadingProgress);
 }
 
+const readingTime = document.querySelector(".reading-time");
+const articleBody = document.querySelector(".article-body");
+
+if (readingTime && articleBody) {
+  const characterCount = articleBody.textContent.trim().length;
+  const minutes = Math.max(1, Math.ceil(characterCount / 300));
+  readingTime.textContent = `预计阅读 ${minutes} 分钟`;
+}
+
 const backToTop = document.querySelector(".back-to-top");
 
 function updateBackToTopVisibility() {
