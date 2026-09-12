@@ -41,3 +41,26 @@ document.addEventListener("keydown", (event) => {
     imageDialog.close();
   }
 });
+
+const readingProgress = document.querySelector(".reading-progress");
+
+function updateReadingProgress() {
+  if (!readingProgress) {
+    return;
+  }
+
+  const scrollableHeight =
+    document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollableHeight > 0
+    ? (window.scrollY / scrollableHeight) * 100
+    : 100;
+
+  readingProgress.style.width = `${Math.min(progress, 100)}%`;
+  readingProgress.setAttribute("aria-valuenow", String(Math.round(progress)));
+}
+
+if (readingProgress) {
+  updateReadingProgress();
+  window.addEventListener("scroll", updateReadingProgress, { passive: true });
+  window.addEventListener("resize", updateReadingProgress);
+}
