@@ -276,6 +276,67 @@ h1 {
   margin-top: 80px;
 }
 
+.blog {
+  margin-top: 112px;
+}
+
+.section-heading {
+  margin-bottom: 24px;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 8px;
+}
+
+.section-heading h2 {
+  margin: 0;
+}
+
+.article-list {
+  display: grid;
+  gap: 16px;
+}
+
+.article-card {
+  padding: 24px;
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+}
+
+.article-date {
+  margin: 0;
+  color: var(--accent-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.article-card h3 {
+  margin: 16px 0 8px;
+  font-size: 1.2rem;
+}
+
+.article-card > p:not(.article-date) {
+  margin: 0;
+  color: var(--muted-color);
+  line-height: 1.7;
+}
+
+.article-card a {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--accent-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.article-card a:hover,
+.article-card a:focus-visible {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
 .interests h2,
 .contact h2 {
   margin-bottom: 0;
