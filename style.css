@@ -144,6 +144,56 @@ nav a:focus-visible {
   animation: page-enter 700ms 120ms ease both;
 }
 
+.error-page {
+  min-height: 65vh;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+}
+
+.error-code {
+  margin: 0;
+  color: var(--accent-color);
+  font-size: clamp(4rem, 16vw, 8rem);
+  line-height: 0.9;
+}
+
+.error-page h1 {
+  margin-top: 32px;
+}
+
+.error-page p {
+  max-width: 520px;
+  color: var(--muted-color);
+  line-height: 1.8;
+}
+
+.error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.error-actions .button {
+  margin-top: 0;
+}
+
+.secondary-button {
+  display: inline-block;
+  padding: 12px 20px;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.secondary-button:hover,
+.secondary-button:focus-visible {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
 .profile-image {
   display: block;
   width: 152px;
@@ -689,6 +739,10 @@ h1 {
 
   .page {
     padding: 56px 0;
+  }
+
+  .error-page {
+    min-height: 60vh;
   }
 
   h1 {
