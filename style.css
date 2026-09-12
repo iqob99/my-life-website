@@ -375,6 +375,41 @@ h1 {
   text-decoration: underline;
 }
 
+.article-navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+}
+
+.article-navigation a {
+  padding: 16px;
+  color: var(--text-color);
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.article-navigation a:last-child {
+  text-align: right;
+}
+
+.article-navigation a:hover,
+.article-navigation a:focus-visible {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.article-navigation small {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted-color);
+  font-size: 0.8rem;
+}
+
 .interests h2,
 .contact h2 {
   margin-bottom: 0;
@@ -554,6 +589,14 @@ h1 {
 
   .page {
     padding: 72px 0;
+  }
+
+  .article-navigation {
+    grid-template-columns: 1fr;
+  }
+
+  .article-navigation a:last-child {
+    text-align: left;
   }
 
   .interest-list {
