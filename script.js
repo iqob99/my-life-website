@@ -64,3 +64,29 @@ if (readingProgress) {
   window.addEventListener("scroll", updateReadingProgress, { passive: true });
   window.addEventListener("resize", updateReadingProgress);
 }
+
+const backToTop = document.querySelector(".back-to-top");
+
+function updateBackToTopVisibility() {
+  if (!backToTop) {
+    return;
+  }
+
+  backToTop.classList.toggle("is-visible", window.scrollY > 400);
+}
+
+if (backToTop) {
+  updateBackToTopVisibility();
+  window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+
+  backToTop.addEventListener("click", () => {
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    window.scrollTo({
+      top: 0,
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+    });
+  });
+}
